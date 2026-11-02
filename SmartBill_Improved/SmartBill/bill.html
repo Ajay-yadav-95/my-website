@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartBill simple shop billing management project">
+    <title>SmartBill | Create New Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1>SmartBill</h1>
+            <p>Smart and Simple Billing Management System</p>
+        </div>
+        <span class="top-tag">SHOP BILLING SYSTEM</span>
+    </header>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="bill.html" class="active" aria-current="page">Create Bill</a>
+        <a href="customers.html">Customers</a>
+        <a href="history.html">Bill History</a>
+    </nav>
+
+    <main class="container">
+        <div class="page-heading">
+            <div>
+                <span class="eyebrow">SmartBill Workspace</span>
+                <h2>Create New Bill</h2>
+                <p class="page-description">Enter customer and purchase details in the sample billing form.</p>
+            </div>
+        </div>
+
+<section class="panel">
+    <h3>Bill Details</h3>
+    <form action="#" method="get">
+        <div class="form-grid">
+            <div class="form-group"><label for="billno">Bill Number</label><input id="billno" type="text" placeholder="e.g. 104" required></div>
+            <div class="form-group"><label for="date">Bill Date</label><input id="date" type="date"></div>
+            <div class="form-group"><label for="customer">Customer Name</label><input id="customer" type="text" placeholder="Enter customer name" required></div>
+            <div class="form-group"><label for="mobile">Mobile Number</label><input id="mobile" type="tel" placeholder="Enter mobile number"></div>
+            <div class="form-group"><label for="product">Select Product</label><select id="product" required><option value="">Choose a product</option><option>Rice - ₹60/kg</option><option>Sugar - ₹45/kg</option><option>Milk - ₹30/litre</option><option>Cooking Oil - ₹150/litre</option></select></div>
+            <div class="form-group"><label for="quantity">Quantity</label><input id="quantity" type="number" min="1" placeholder="Enter quantity" required></div>
+            <div class="form-group full"><label for="payment">Payment Method</label><select id="payment"><option>Cash</option><option>UPI</option><option>Card</option></select></div>
+        </div>
+        <button class="button" type="submit">Submit Bill</button>
+    </form>
+    <p class="form-note">Demo only: this HTML/CSS version does not calculate totals or save submitted bills. Those features need JavaScript or a backend.</p>
+</section>
+
+    </main>
+
+    <footer>
+        <strong>SmartBill Billing System</strong>
+        <p>B.Tech AI/ML First Year College Project</p>
+        <p>© 2026 SmartBill. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

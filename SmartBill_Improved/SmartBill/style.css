@@ -1,0 +1,373 @@
+/* SMARTBILL - IMPROVED RESPONSIVE DESIGN */
+:root {
+    --navy: #10243e;
+    --navy-light: #193858;
+    --blue: #3478f6;
+    --blue-soft: #eaf1ff;
+    --page: #f4f7fb;
+    --white: #ffffff;
+    --text: #243247;
+    --muted: #718096;
+    --border: #e3eaf2;
+    --green: #168653;
+    --green-soft: #e5f7ee;
+    --orange: #b66a12;
+    --orange-soft: #fff3df;
+    --shadow: 0 10px 30px rgba(16, 36, 62, .07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--page);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* TOP HEADER */
+.topbar {
+    background: linear-gradient(120deg, var(--navy), var(--navy-light));
+    color: var(--white);
+    padding: 22px max(5%, calc((100% - 1180px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand h1 {
+    font-size: 27px;
+    letter-spacing: .3px;
+}
+
+.brand p {
+    color: #c4d3e5;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.top-tag {
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 30px;
+    padding: 7px 13px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar a {
+    color: #526176;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 16px 18px;
+    border-bottom: 3px solid transparent;
+    transition: .2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+    background: #f8faff;
+}
+
+/* MAIN LAYOUT */
+.container {
+    width: min(1180px, 90%);
+    margin: 34px auto;
+    min-height: 55vh;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+h2 {
+    color: var(--navy);
+    font-size: clamp(23px, 3vw, 30px);
+    line-height: 1.25;
+    margin-top: 5px;
+}
+
+.page-description {
+    color: var(--muted);
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+/* PANELS AND DASHBOARD CARDS */
+.panel,
+.stat-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.panel {
+    padding: 24px;
+    margin-bottom: 22px;
+}
+
+.panel h3 {
+    color: var(--navy);
+    margin-bottom: 14px;
+    font-size: 17px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.stat-card {
+    padding: 21px;
+    border-left: 4px solid var(--blue);
+}
+
+.stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.stat-card strong {
+    display: block;
+    color: var(--navy);
+    font-size: 27px;
+    margin-top: 8px;
+}
+
+.stat-card small {
+    color: var(--green);
+    font-size: 12px;
+}
+
+/* TABLES */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 580px;
+    background: var(--white);
+}
+
+th, td {
+    padding: 15px 17px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+th {
+    background: #f0f5fc;
+    color: #41536c;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 11px;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 5px 11px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.paid {
+    color: var(--green);
+    background: var(--green-soft);
+}
+
+.pending {
+    color: var(--orange);
+    background: var(--orange-soft);
+}
+
+/* FORMS */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.form-group {
+    margin-bottom: 4px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    color: #40516a;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d6e0eb;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: .2s;
+}
+
+input:focus, select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(52,120,246,.12);
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    background: var(--blue);
+    color: white;
+    padding: 12px 19px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover {
+    background: #225fd0;
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background: #eaf1ff;
+    color: var(--blue);
+}
+
+.button-secondary:hover {
+    background: #dce8ff;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--navy);
+    color: #d5dfeb;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 45px;
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .navbar {
+        position: static;
+        padding: 7px 3%;
+        gap: 0;
+    }
+
+    .navbar a {
+        padding: 11px 10px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 23px auto;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats-grid,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+}
